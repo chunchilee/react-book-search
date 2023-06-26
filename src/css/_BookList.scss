@@ -1,0 +1,60 @@
+.booksList {
+  padding: 3rem 0;
+  background-color: #f8f9fa;
+  .booksList-content {
+    gap: 3rem;
+    .book-item {
+      padding: 3rem 2rem;
+      border-radius: 4px;
+      background-color: var(--white-color);
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 15px 0px;
+      transition: var(--transition);
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+      }
+      .book-item-img img {
+        max-width: 180px;
+        margin: 0 auto;
+      }
+      .book-item-info {
+        margin-top: 2rem;
+        .info-title {
+          line-height: 1.4;
+          margin-bottom: 0.8rem;
+        }
+        .info-author {
+          line-height: 1.4;
+          margin-bottom: 4px;
+        }
+        > div:not(.info-title) span:last-child {
+          opacity: 0.8;
+        }
+        .publish-year{
+          opacity: 0.6;
+          font-style: italic;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .booksList {
+    .booksList-content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media (min-width: 992px) {
+  .booksList {
+    .booksList-content {
+      grid-template-columns: repeat(3, 1fr);
+      .book-item {
+        .book-item-img img {
+          max-width: 120px;
+        }
+      }
+    }
+  }
+}

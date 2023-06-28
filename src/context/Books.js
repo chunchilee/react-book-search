@@ -6,7 +6,7 @@ import {
   useState,
 } from "react";
 
-const URL = "http://openlibrary.org/search.json?title=";
+const URL = "https://openlibrary.org/search.json?title=";
 
 const BooksContext = createContext();
 

@@ -1,14 +1,13 @@
 import React from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Book = (book) => {
-
   return (
     <div className="book-item flex flex-column flex-sb">
-      <div className="book-item-img">
-        <img src={book.cover_i} alt="cover_i" />
-      </div>
       <Link to={`/book/${book.id}`} {...book}>
+        <div className="book-item-img">
+          <img src={book.cover_i} alt="cover_i" />
+        </div>
         <div className="book-item-info text-center">
           <div className="info-item info-title fw-7 fs-18">
             <span>{book.title}</span>
